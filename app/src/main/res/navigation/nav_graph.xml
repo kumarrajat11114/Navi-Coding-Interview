@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pullRequestListFragment">
+
+    <fragment
+        android:id="@+id/pullRequestListFragment"
+        android:name="com.rajatkumar.navicodinginterview.pullRequest.presentation.list.PullRequestListFragment"
+        android:label="fragment_pull_request_list"
+        tools:layout="@layout/fragment_pull_request_list">
+        <action
+            android:id="@+id/action_pullRequestListFragment_to_pullRequestDetailFragment"
+            app:destination="@id/pullRequestDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/pullRequestDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/pullRequestDetailFragment"
+        android:name="com.rajatkumar.navicodinginterview.pullRequest.presentation.details.PullRequestDetailFragment"
+        android:label="fragment_pull_request_detail"
+        tools:layout="@layout/fragment_pull_request_detail">
+        <argument
+            android:name="pullRequest"
+            app:argType="com.rajatkumar.navicodinginterview.pullRequest.domain.models.PullRequest" />
+    </fragment>
+
+</navigation>

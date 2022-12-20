@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Rajat Navi Coding Interview</string>
+    <string name="create_at">Created at %s</string>
+    <string name="closed_at">Closed at %s</string>
+    <string name="by_">by %s</string>
+    <string name="retry">Retry</string>
+    <string name="check_connection">Slow or No Internet Connection \n Please check your connection and retry</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="data_not_found">Data not found</string>
+    <string name="transition_image">transition image</string>
+    <string name="pull_request_not_found">No Pull Requests found</string>
+
+</resources>
