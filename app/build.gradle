@@ -28,11 +28,11 @@ android {
     buildTypes {
         debug {
             buildConfigField "String", "user", "\"kumarrajat11114\""
-            buildConfigField "String", "apiKey", "\"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\""
+            buildConfigField "String", "apiKey", "\"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\""
         }
         release {
             buildConfigField "String", "user", "\"kumarrajat11114\""
-            buildConfigField "String", "apiKey", "\"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\""
+            buildConfigField "String", "apiKey", "\"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\""
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

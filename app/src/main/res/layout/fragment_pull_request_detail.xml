@@ -4,29 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_background_color"
+    android:background="@color/white"
     tools:context="com.rajatkumar.navicodinginterview.pullRequest.presentation.details.PullRequestDetailFragment">
 
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:transitionName="@string/transition_image"
-            android:id="@+id/iv_profile"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            app:cardCornerRadius="150dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="@dimen/dp150"
+        android:layout_height="@dimen/dp150"
+        android:layout_marginTop="@dimen/dp24"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:transitionName="@string/transition_image"
+        app:cardCornerRadius="@dimen/dp150"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/dp4"
         app:layout_constraintEnd_toEndOf="@+id/iv_profile"
         app:layout_constraintStart_toStartOf="@+id/iv_profile"
         app:layout_constraintTop_toBottomOf="@+id/iv_profile"
@@ -36,10 +35,9 @@
         android:id="@+id/tv_created_at"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-
+        android:layout_marginTop="@dimen/dp16"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/tv_closed_at"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_user"
         tools:text="Created At: 15th May 2021" />
@@ -48,36 +46,36 @@
         android:id="@+id/tv_closed_at"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/dp16"
         android:textColor="@color/black"
         app:chainUseRtl="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_created_at"
-        app:layout_constraintTop_toBottomOf="@+id/tv_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_created_at"
         tools:text="Closed on: 15th June 2021" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="@dimen/text_size_large"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_created_at"
+        app:layout_constraintTop_toBottomOf="@+id/tv_closed_at"
         tools:text="This is the Title of the PR solving this and this this issue" />
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -88,7 +86,7 @@
             android:id="@+id/tv_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size_medium"
             tools:text="This the dummy description of the said above issue bla bal bal bal bal bal " />
 
     </ScrollView>
@@ -97,10 +95,10 @@
         android:id="@+id/ib_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/dp8"
+        android:layout_marginTop="@dimen/dp8"
         android:background="@null"
-        android:padding="8dp"
+        android:padding="@dimen/dp8"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
